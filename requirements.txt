@@ -1,0 +1,8 @@
+# cs50
+## Flask - pip install Flask
+### Flask-Session
+#### requests
+##### If don't run on default port: flask run -h localhost -p 5001
+###### pip install cryptography
+####### pip install Unidecode
+####### from cryptography.fernet import Fernet
