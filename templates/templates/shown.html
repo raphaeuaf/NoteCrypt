@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shown
+{% endblock %}
+
+{% block main %}
+
+    <main class="container py-5 text-center">
+        <table class="table tablestriped">
+            <thead>
+                <tr>
+                    <th class="text-start">Place / Keyword</th>
+                    <th class="text-end">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(0, lv|length, 3) %}
+                <tr>
+                    <td id="k" class="text-start">{{ lv[1 + i] }}</td>
+                    <td id="v" class="text-end">{{ lv[2 + i] }}</td>
+                    <td>
+                        <form action="/modify" method="post">
+                            <input name="idmodify" type="hidden" value="{{ lv[i] }}">
+                            <input name="kmodify" type="hidden" value="{{ lv[1 + i] }}">
+                            <input name="vmodify" type="hidden" value="{{ lv[2 + i] }}">
+                            <input class="btn btn-primary" id="modify" type="submit" value="Modify">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/delete" method="post">
+                            <input name="iddelete" type="hidden" value="{{ lv[i] }}">
+                            <input name="kdelete" type="hidden" value="{{ lv[1 + i] }}">
+                            <input name="vdelete" type="hidden" value="{{ lv[2 + i] }}">
+                            <input class="btn btn-primary" id="delete" type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if lv %}
+            <img id="madrugaf2" alt="madruga feliz" src="/static/cofre.gif">
+        {% else %}
+            <img id="madrugaf2" alt="madruga feliz" src="/static/cofrevazio.gif">
+        {% endif %}
+    </main>
+{% endblock %}

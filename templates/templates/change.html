@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change
+{% endblock %}
+
+{% block main %}
+    <div>
+    <img id="change" alt="madruga feliz" src="/static/change.gif">
+    </div>
+    <form action="/change" method="post">
+            <div class="mb-3">
+                <label for="pass">Password (4 characters minimum):</label>
+                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" minlength="4" type="password" required>
+            </div>
+            <div class="mb-3">
+                <label for="pass">New Password (4 characters minimum):</label>
+                <input class="form-control mx-auto w-auto" id="newpassword" name="newpassword" placeholder="New Password" minlength="4" type="password" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="New Password (again)" minlength="4" type="password" required>
+                <script>
+                    var newpassword = document.getElementById("newpassword"),
+                    confirmation = document.getElementById("confirmation");
+                    function validatePassword() {
+                        if(newpassword.value != confirmation.value) {
+                            confirmation.setCustomValidity("Passwords Don't Match");}
+                        else {
+                            confirmation.setCustomValidity('');}
+                    }
+                    newpassword.onchange = validatePassword;
+                    confirmation.onkeyup = validatePassword;
+                </script>
+        </div>
+        <button class="btn btn-primary" type="submit">Change</button>
+    </form>
+{% endblock %}

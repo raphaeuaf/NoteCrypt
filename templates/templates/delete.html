@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+
+    <main class="container py-5 text-center">
+        <form action="/deleted" method="post">
+            <table class="table tablestriped">
+                <thead>
+                    <tr>
+                        <th class="text-start">Place / Keyword</th>
+                        <th class="text-end">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td id="k" class="text-start"> <em> {{ k }} </em> </td>
+                            <td id="v" class="text-end"> <em> {{ v }} </em> </td>
+                            <input name="iddelete" type="hidden" value="{{ id }}">
+                            <td>
+                                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password" required>
+                            </td>
+                            <td>
+                                    <input class="btn btn-primary" id="modify" type="submit" value="Delete">
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+            <div>
+                <input class="btn btn-primary" name="shure" id="shure" type="radio" value="Delete" required>
+                <label for="shure"> Are you shure? </label><br>
+            </div>
+        </form>
+        <img id="notesnotes" alt="notes" src="/static/notes.gif">
+    </main>
+{% endblock %}

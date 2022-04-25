@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Modify
+{% endblock %}
+
+{% block main %}
+
+    <main class="container py-5 text-center">
+        <table class="table tablestriped">
+            <thead>
+                <tr>
+                    <th class="text-start">Place / Keyword</th>
+                    <th class="text-end">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <form action="/modified" method="post">
+                    <tr>
+                        <td id="k" class="text-start"> <em>Original:</em> {{ k }} </td>
+                        <td id="v" class="text-end"> <em>Original:</em> {{ v }} </td>
+                    </tr>
+                    <tr>
+                        <td id="k" class="text-start">
+                            <input name="kinput" oninput="this.size = this.value.length + 1" placeholder="{{ k }}" value="{{ k }}" required>
+                        </td>
+                        <td id="k" class="text-start">
+                            <input name="vinput" oninput="this.size = this.value.length + 1" placeholder="{{ v }}" value="{{ v }}">
+                            <input name="idinput" type="hidden" value="{{ id }}">
+                        </td>
+                        <td>
+                            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password" required>
+                        </td>
+                        <td>
+                                <input class="btn btn-primary" id="modify" type="submit" value="Modify">
+                        </td>
+                    </tr>
+                </form>
+            </tbody>
+        </table>
+        <img id="madrugaf2" alt="madruga feliz" src="/static/chaveschapolin.gif">
+    </main>
+{% endblock %}
