@@ -1,0 +1,93 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue1
+{
+    color: #00275e;
+}
+/* Colors for brand */
+nav .navbar-brand .blue2
+{
+    color: #0046ab;
+}
+/* Colors for brand */
+nav .navbar-brand .blue3
+{
+    color: #0051c5;
+}
+nav .navbar-brand .blue4
+{
+    color: #0062ef;
+}
+nav .navbar-brand .gray
+{
+    color: #686868;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+nav .navbar-toggler
+{
+    color: #ff0000;
+}
+#madrugaf {
+    height: 50pt;
+    float: right;
+}
+#madrugaf2 {
+    height: 200pt;
+    float: right;
+}
+#change {
+    position: absolute;
+    height: 400pt;
+    float: right;
+    top: 10%;
+    right: 20%;
+}
+#searching {
+    height: 200pt;
+    float: right;
+}
+#notesnotes {
+    height: 400pt;
+    float: right;
+    transform: rotate(15deg);
+}
+#index {
+    height: 300pt;
+    float: right;
+    transform: rotate(15deg);
+}
+#delete {
+    color: #fff;
+    background-color: #fb6363;
+    border-color: #fb6363;
+}
+#modify {
+    color: #fff;
+    background-color: #ffc889;
+    border-color: #ffc889;
+}
+.mine {
+    background-image: url("/static/chapo cinza.png");
+    background-color: linear-gradient(red, yellow, green);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: left top;
+}
+.developed {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
